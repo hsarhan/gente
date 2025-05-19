@@ -5,7 +5,7 @@
 <div class="text-center">
     <img src={logo} alt="AGSM" class="w-64 lg:w-80 mx-auto my-2">
     <h2 class="font-bold uppercase text-4xl text-secondary-200 dark:text-surface-500">Associacao</h2>
-    <h3 class="font-bold uppercase text-4xl text-secondary-400 dark:text-primary-400 -my-3">Gente da Serra</h3>
+    <h3 class="font-bold uppercase text-4xl text-secondary-400 dark:text-primary-400 -my-3">GENTE da Serra</h3>
     <h3 class="font-bold uppercase text-4xl text-secondary-900 dark:text-primary-200">da Mantiqueira</h3>
 </div>
 
