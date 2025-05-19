@@ -4,8 +4,9 @@
 
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton/optional/presets';
-@import '@skeletonlabs/skeleton/themes/vox';
-/* @import '@skeletonlabs/skeleton/themes/agsm'; */
+/* @import '@skeletonlabs/skeleton/themes/vox';
+@import '@skeletonlabs/skeleton/themes/agsm'; */
+@import '../src/agsm';
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 
