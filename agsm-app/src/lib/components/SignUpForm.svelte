@@ -103,7 +103,7 @@
   
   
         <div class="py-4">
-          <button type="submit" class="flex w-full justify-center rounded-md bg-secondary-600 px-3 py-3 text-sm/6 font-semibold text-white shadow-xs hover:bg-secondary-500 dark:bg-primary-500 dark:hover:bg-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600">Enviar</button>
+          <button type="submit" class="flex w-full justify-center rounded-md bg-secondary-600 px-3 py-3 text-sm/6 font-semibold text-white dark:text-primary-800 shadow-xs hover:bg-secondary-500 dark:bg-primary-500 dark:hover:bg-primary-600 dark:hover:dark:text-primary-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600">Enviar</button>
         </div>
       </form>
   

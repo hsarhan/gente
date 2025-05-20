@@ -5,7 +5,7 @@
     'https://images.unsplash.com/photo-1463171515643-952cee54d42a?q=80&w=450&h=190&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 </script>
 
-<section>
+<section class="py-4">
     <h1 class="py-2 lg:py-4 h1 text-center">TITLE</h1>
     <div class="w-full h-fit grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="card preset-filled-primary-100-900 hover:bg-surface-50-950 cursor-pointer">

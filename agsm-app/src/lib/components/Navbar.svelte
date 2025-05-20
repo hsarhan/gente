@@ -1,6 +1,6 @@
 <script>
-    import navLogo from '$lib/imgs/agsm_navlogo_dk.png';
 	  import LightSwitch from './LightSwitch.svelte';
+	  import LogoHz from './LogoHz.svelte';
     let showMenu = false;
   
     function toggleNavbar() {
@@ -11,14 +11,10 @@
   <div>
     <div class="bg-secondary-900">
       <nav
-        class="w-full p-4 mx-auto md:flex md:justify-between md:items-center"
+        class="w-full max-w-screen-xl min-h-24 p-4 mx-auto md:flex md:justify-between md:items-center"
       >
         <div class="flex items-center justify-between">
-          <a
-            class="w-36 md:w-32 lg:w-full"
-            href="/"
-            ><img src={navLogo} alt="AGSM">
-          </a>
+          <a href="/"><div class="items-center scale-110 ml-2 mt-1 xl:m-0"><LogoHz lSize="10" tSize="32" /></div></a>
           <!-- Mobile menu button -->
           <div on:click={toggleNavbar} class="flex md:hidden">
             <button

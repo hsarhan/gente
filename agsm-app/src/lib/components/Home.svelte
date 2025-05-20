@@ -7,9 +7,11 @@
 </script>
 
 <Navbar />
-<Hero />
-<main class="p-4 space-y-6 dark:bg-primary-800">
-    <CardGrid /> 
-</main>
+<section class="max-w-6xl mx-auto">
+	<Hero />
+	<main class="p-4 space-y-6 dark:bg-primary-800">
+		<CardGrid /> 
+	</main>
+</section>
 
 <Footer />

@@ -1,14 +1,25 @@
 <script>
     import logo from '$lib/imgs/agsm_logo_2xl.png';
+    import gCtr from '$lib/imgs/agsm_tipos_gcentr.svg'
+    import yCtr from '$lib/imgs/agsm_tipos_ycentr.svg'
+
     export let showText = false;
+    export let green = false;
 </script>
 
 <div class="text-center">
     <img src={logo} alt="AGSM" class="w-64 lg:w-80 mx-auto my-2">
-    {#if showText == true }       
+    {#if showText == true }
+        {#if green }            
+            <img src={gCtr} alt="AGSM" class="w-90 lg:w-120 mx-auto my-2">
+            {:else}
+            <img src={yCtr} alt="AGSM" class="w-90 lg:w-120 mx-auto my-2">
+        {/if}
+        <!-- 
         <h2 class="font-bold uppercase text-4xl text-secondary-200 dark:text-surface-500">Associacao</h2>
         <h3 class="font-bold uppercase text-4xl text-secondary-400 dark:text-primary-400 -my-3">GENTE da Serra</h3>
-        <h3 class="font-bold uppercase text-4xl text-secondary-900 dark:text-primary-200">da Mantiqueira</h3>
+        <h3 class="font-bold uppercase text-4xl text-secondary-900 dark:text-primary-200">da Mantiqueira</h3> 
+        -->
     {/if}
 </div>
 
