@@ -8,7 +8,7 @@
         <div>
             <div class="w-20 mx-auto lg:mx-0 lg:-mt-6"><Logo /></div>
   
-          <p class="mt-4 mx-auto lg:mx-0 max-w-xs text-gray-500 dark:text-primary-400 text-center lg:text-left">
+          <p class="mt-4 mx-auto lg:mx-0 max-w-xs text-gray-500 dark:text-primary-200 text-center lg:text-left">
             Sítio 20 pés • Bairro do Rosário<br/>Delfim Moreira, MG • CEP 37514000
           </p>
 
@@ -115,8 +115,11 @@
   
       </div>
   
-      <p class="text-xs text-gray-500 dark:text-gray-200 text-pretty text-center">
-        Associação GENTE da Serra da Mantiqueira.<br/>CNPJ: 51.508.002/0001-27<br/>&copy; 2025 - Todos os direitos reservados.
-      </p>
+      <div class="mb-0 pb-0 mx-auto w-[30ch] md:w-full">
+          <p class="text-xs text-gray-500 dark:text-primary-200 text-pretty text-center">
+            Associação GENTE da Serra da Mantiqueira. CNPJ: 51.508.002/0001-27
+          </p>
+          <p class="mt-2 md:mt-0 text-xs text-gray-500 dark:text-primary-200 text-pretty text-center">&copy; 2025 - Todos os direitos reservados.</p>
+      </div>
     </div>
   </footer>
