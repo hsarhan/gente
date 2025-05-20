@@ -6,15 +6,6 @@
     <div class="mx-auto max-w-screen-xl space-y-8 px-4 py-8 sm:px-6 lg:space-y-16 lg:px-8 lg:py-8">
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
         <div>
-            <!-- <div class="w-fit mx-auto lg:mx-0 grid auto-cols-max grid-flow-col justify-start content-center items-center">
-                <div class="w-20 lg:mx-0 lg:-mt-6"><Logo /></div>
-                <div class="-space-y-2 lg:-mt-6 ml-3">
-                    <h2 class="font-bold uppercase text-secondary-200 dark:text-surface-500">Associacao</h2>
-                    <h3 class="font-bold uppercase text-secondary-400 dark:text-primary-400">GENTE da Serra</h3>
-                    <h3 class="font-bold uppercase text-secondary-900 dark:text-primary-200">da Mantiqueira</h3>
-                </div>
-            </div> -->
-  
             <LogoHz green />
           <p class="mt-4 mx-auto lg:mx-0 max-w-xs text-gray-500 dark:text-primary-200 text-center lg:text-left">
             Sítio 20 pés • Bairro do Rosário<br/>Delfim Moreira, MG • CEP 37514000
