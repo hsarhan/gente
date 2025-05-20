@@ -14,7 +14,7 @@
         class="w-full max-w-screen-xl min-h-24 p-4 mx-auto md:flex md:justify-between md:items-center"
       >
         <div class="flex items-center justify-between">
-          <a href="/"><div class="items-center ml-2 mt-1 xl:m-0"><LogoHz lSize="10" tSize = "8em"; /></div></a>
+          <a href="/"><div class="items-center ml-2 mt-1 xl:m-0"><LogoHz lSize="w-[3.2em]" /></div></a>
           <!-- Mobile menu button -->
           <div on:click={toggleNavbar} class="flex md:hidden">
             <button

@@ -4,21 +4,23 @@
     import yLft from '$lib/imgs/agsm_tipos_yleft.svg'
 
     export let green = false;
-    export let lSize = "20";
-    export let tSize = "12em";
+    export let lSize = "w-[6em]";
+    export let lType = 'w-[10em]';
+    $: logoSize = lSize;
+    $: tSize = lType;
 </script>
 
 <div class="w-fit mx-auto lg:mx-0 grid auto-cols-max grid-flow-col justify-start content-center items-center">
-    <div class="w-{lSize} lg:mx-0"><img src={logo} alt="AGSM" class="w-64 mx-auto my-2"></div>
+    <div class="{logoSize} lg:mx-0"><img src={logo} alt="AGSM" class="w-64 mx-auto my-2"></div>
 
-    <div class="dark:hidden -space-y-2 ml-3 w-[10em]">
+    <div class="dark:hidden -space-y-2 ml-3 {tSize}">
         {#if green }            
             <img src={gLft} alt="AGSM">
             {:else}
             <img src={yLft} alt="AGSM">
         {/if}
     </div>
-    <div class="hidden dark:block -space-y-2 ml-3 w-3xs">
+    <div class="hidden dark:block -space-y-2 ml-3 {tSize}">
         <img src={yLft} alt="AGSM">
     </div>
 </div>

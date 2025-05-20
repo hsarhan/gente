@@ -6,8 +6,8 @@
     <div class="mx-auto max-w-screen-xl space-y-8 px-4 py-8 sm:px-6 lg:space-y-16 lg:px-8 lg:py-8">
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
         <div>
-            <LogoHz green />
-          <p class="mt-4 mx-auto lg:mx-0 max-w-xs text-gray-500 dark:text-primary-200 text-center lg:text-left">
+            <LogoHz green lType="w-[12em]" />
+          <p class="mt-4 mx-auto lg:mx-0 max-w-x text-xs text-secondary-800 dark:text-primary-200 text-center lg:text-left">
             Sítio 20 pés • Bairro do Rosário<br/>Delfim Moreira, MG • CEP 37514000
           </p>
 
@@ -22,7 +22,7 @@
                     href="https://facebook.com"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    class="text-secondary-800 transition hover:opacity-75 dark:text-primary-100"
                     >
                     <span class="sr-only">Facebook</span>
 
@@ -41,7 +41,7 @@
                     href="https://instagram.com"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    class="text-secondary-800 transition hover:opacity-75 dark:text-primary-100"
                     >
                     <span class="sr-only">Instagram</span>
 
@@ -60,7 +60,7 @@
                     href="https://twitter.com"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    class="text-secondary-800 transition hover:opacity-75 dark:text-primary-100"
                     >
                     <span class="sr-only">Twitter</span>
 
@@ -77,7 +77,7 @@
                     href="https://github.com"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    class="text-secondary-800 transition hover:opacity-75 dark:text-primary-100"
                     >
                     <span class="sr-only">GitHub</span>
 
@@ -96,7 +96,7 @@
                     href="https://dribble.com"
                     rel="noreferrer"
                     target="_blank"
-                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    class="text-secondary-800 transition hover:opacity-75 dark:text-primary-100"
                     >
                     <span class="sr-only">Dribbble</span>
 
@@ -115,10 +115,10 @@
       </div>
   
       <div class="mb-0 pb-0 mx-auto w-[30ch] md:w-full">
-          <p class="text-xs text-gray-500 dark:text-primary-200 text-pretty text-center">
+          <p class="text-xs text-secondary-800 dark:text-primary-200 text-pretty text-center">
             Associação GENTE da Serra da Mantiqueira. CNPJ: 51.508.002/0001-27
           </p>
-          <p class="mt-2 md:mt-0 text-xs text-gray-500 dark:text-primary-200 text-pretty text-center">&copy; 2025 - Todos os direitos reservados.</p>
+          <p class="mt-2 md:mt-0 text-xs text-secondary-800 dark:text-primary-200 text-pretty text-center">&copy; 2025 - Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
