@@ -23,7 +23,7 @@
           <div on:click={toggleNavbar} class="flex md:hidden">
             <button
               type="button"
-              class="text-gray-100 hover:text-gray-400 focus:outline-none focus:text-gray-400"
+              class="text-gray-100 hover:text-primary-400 focus:outline-none focus:text-primary-400"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -54,14 +54,16 @@
           <a class="text-gray-100 hover:text-primary-400" href="/">Produtos</a>
           <a class="text-gray-100 hover:text-primary-400" href="/">Contato</a>
           <div class="space-y-2">
-            <a
-              href="/"
+            <!-- <a
+              href="/login"
+              title="Login"
               class="py-3 px-4 text-center border text-gray-800 bg-white hover:text-secondary-600 rounded-md block md:inline lg:border-0"
             >
               Login
-            </a>
+            </a> -->
             <a
-              href="/"
+              href="/signup"
+              title="Faça parte"
               class="py-3 px-4 text-center text-primary-900 bg-primary-500 hover:bg-primary-300 rounded-md shadow block md:inline"
             >
               Faça Parte

@@ -2,17 +2,17 @@
     import Logo from "./Logo.svelte";
 </script>
 
-<section class="relative h-screen md:h-[70dvh] flex flex-col items-center justify-center text-center text-white ">
+<section class="relative h-[100dvh] md:h-[70dvh] flex flex-col items-center justify-center text-center text-white ">
     <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
         <video class="min-w-full min-h-full absolute object-cover"
             src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
             type="video/mp4" autoplay muted loop></video>
     </div>
     <div class="video-content z-10">
-        <Logo />
+        <Logo showText />
         <a
-            href="/"
-            class="py-3 px-4 mt-4 text-center text-primary-900 bg-primary-500 hover:bg-primary-300 rounded-md block md:inline-flex"
+            href="/signup"
+            class="uppercase py-3 px-4 mt-4 text-center text-primary-900 bg-primary-500 hover:bg-primary-300 rounded-md block md:inline-flex"
         >
             Faça parte
         </a>

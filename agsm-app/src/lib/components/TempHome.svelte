@@ -5,6 +5,6 @@
 
 <div></div>
 <div class="place-self-center">
-    <Logo />
+    <Logo showText />
 </div>
 <div></div>
