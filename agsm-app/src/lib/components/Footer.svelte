@@ -1,5 +1,4 @@
 <script>
-	import Logo from './Logo.svelte';
 	import LogoHz from './LogoHz.svelte';
 </script>
 
@@ -16,7 +15,7 @@
                 </div>
             </div> -->
   
-        <LogoHz green />
+            <LogoHz green />
           <p class="mt-4 mx-auto lg:mx-0 max-w-xs text-gray-500 dark:text-primary-200 text-center lg:text-left">
             Sítio 20 pés • Bairro do Rosário<br/>Delfim Moreira, MG • CEP 37514000
           </p>
@@ -29,7 +28,7 @@
             <ul class="mt-4 lg:-mt-8 flex gap-6 lg:gap-3 lg:justify-end">
                 <li>
                     <a
-                    href="#"
+                    href="https://facebook.com"
                     rel="noreferrer"
                     target="_blank"
                     class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
@@ -48,7 +47,7 @@
 
                 <li>
                     <a
-                    href="#"
+                    href="https://instagram.com"
                     rel="noreferrer"
                     target="_blank"
                     class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
@@ -67,7 +66,7 @@
 
                 <li>
                     <a
-                    href="#"
+                    href="https://twitter.com"
                     rel="noreferrer"
                     target="_blank"
                     class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
@@ -84,7 +83,7 @@
 
                 <li>
                     <a
-                    href="#"
+                    href="https://github.com"
                     rel="noreferrer"
                     target="_blank"
                     class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
@@ -103,7 +102,7 @@
 
                 <li>
                     <a
-                    href="#"
+                    href="https://dribble.com"
                     rel="noreferrer"
                     target="_blank"
                     class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
