@@ -5,7 +5,7 @@
 <div class="flex min-h-full flex-col justify-center md:px-6 py-12 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <div class="w-20 h-10 mx-auto"><Logo /></div>
-      <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-secondary-900 dark:text-primary-400">Faça parte da GENTE</h2>
+      <h2 class="h2 mt-10 text-center text-3xl/9 font-bold tracking-tight text-secondary-900 dark:text-primary-400">Faça parte da GENTE</h2>
       <p class="mt-2 text-center text-gray-500 dark:text-gray-200">Nossas vagas são limitadas.</p>
     </div>
   
@@ -89,7 +89,7 @@
             <div class="w-full mt-2 grid gap-4">
               <label class="flex items-center space-x-2">
                 <input class="checkbox" type="checkbox" required />
-                <p class="py-1.5 text-sm text-gray-700 dark:text-primary-100">Li, e estou de acordo com os <a href="/termos" class="font-semibold text-secondary-600 hover:text-secondary-500 dark:text-primary-500 dark:hover:text-primary-200 hover:underline"> Termos da GENTE</a>.</p>
+                <p class="py-1.5 text-sm text-gray-700 dark:text-primary-100">Li, e aceito os <a href="/termos" class="font-semibold text-secondary-600 hover:text-secondary-500 dark:text-primary-500 dark:hover:text-primary-200 hover:underline text-pretty"> Termos de Adesão</a> da GENTE.</p>
               </label>
   
               <label class="flex items-center space-x-2">
