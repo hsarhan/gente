@@ -1,7 +1,7 @@
 <div class="grid mx-auto my-2 text-center lg:mx-0 lg:text-right lg:justify-end">
     <!-- Social -->
     <h3 class="h3 lg:mt-0">Siga a GENTE</h3>
-    <ul class="w-fit h-fit mx-auto lg:mx-0 mt-4 lg:-mt-8 grid auto-cols-max grid-flow-col gap-3 lg:justify-end lg:justify-self-end items-center align-middle">
+    <ul class="w-fit h-fit mx-auto lg:mx-0 mt-4 lg:mt-0 grid auto-cols-max grid-flow-col gap-3 lg:justify-end lg:justify-self-end items-center align-middle">
         <li>
             <a
             href="https://facebook.com"

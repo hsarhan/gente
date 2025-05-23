@@ -3,11 +3,10 @@
 	import Footer from "$lib/components/Footer.svelte";
 	import Logo from "$lib/components/Logo.svelte";
 	import Navbar from "$lib/components/Navbar.svelte";
-	// import SignUpForm from "$lib/components/SignUpForm.svelte";
 	import {pacientes, diagnosticos} from "$lib/data.js"
 
 	export let form;
-    $: console.log(form);
+    // $: console.log(form);
 
 	let btnDisabled = false;
 	let pacList = pacientes;
@@ -16,6 +15,7 @@
 </script>
 
 <Navbar />
+
 <main class="p-4 space-y-6 dark:bg-primary-800">
 	<!-- SignUp Form -->
 	<div class="flex min-h-full flex-col justify-center md:px-6 py-12 lg:px-8">
@@ -29,7 +29,12 @@
 		<div class="mt-10 mx-auto w-full sm:max-w-md bg-surface-50-950 p-6 rounded-lg">
 
 			{#if form?.success }
-				<p class="py-4 text-sm text-secondary-300 dark:text-primary-300">{form?.status || ""}</p>
+			<!-- Success -->
+			<div class="space-y-2 pb-2">
+				<h4 class="h4">A GENTE se fala em breve...</h4>
+				<p class="py-4 text-sm text-secondary-300 dark:text-primary-300 mb-4">{@html form?.status || ""}</p>
+				<a href="/" class="flex w-full justify-center rounded-md bg-secondary-600 px-3 py-3 text-sm/6 font-semibold text-white dark:text-primary-800 shadow-xs hover:bg-secondary-500 dark:bg-primary-500 dark:hover:bg-primary-600 dark:hover:dark:text-primary-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600">Voltar para home</a>
+			</div>
 			{:else}
 			<form method="POST" use:enhance={() => {
 				return async({result}) => {
@@ -52,7 +57,7 @@
 				<div>
 					<label for="email" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Seu email</label>
 					<div class="mt-2">
-						<input type="email" name="email" id="email" aria-label="email" autocomplete="email" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.email || ""} class:error={form?.errors.email} />
+						<input type="email" name="email" id="email" aria-label="email" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.email || ""} class:error={form?.errors.email} />
 						{#if form?.errors.email }
 							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.email}</p>
 						{/if}
@@ -63,7 +68,7 @@
 				<div>
 					<label for="phone" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Seu telefone</label>
 					<div class="mt-2">
-						<input type="tel" name="phone" id="phone" autocomplete="tel" aria-label="phone" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" placeholder="ex: +55 11 987654321" value={form?.phone || ""} class:error={form?.errors.phone} />
+						<input type="tel" name="phone" id="phone" aria-label="phone" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" placeholder="ex: +55 11 987654321" value={form?.phone || ""} class:error={form?.errors.phone} />
 						{#if form?.errors.phone }
 							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.phone}</p>
 						{/if}
@@ -123,19 +128,22 @@
 					<div class="mt-2">
 						<div class="w-full mt-2 grid gap-4">
 							<label class="flex items-center space-x-2">
-								<input bind:checked={btnDisabled} class="checkbox" type="checkbox" id="signup" name="signup" aria-label="signup" />
-								<p class="py-1.5 text-sm text-gray-700 dark:text-primary-100">Li, e aceito os <a href="/termos" target="_blank" class="font-semibold text-secondary-600 hover:text-secondary-500 dark:text-primary-500 dark:hover:text-primary-200 hover:underline text-pretty"> Termos de Adesão</a> da GENTE.</p>
+								<input bind:checked={btnDisabled} class="checkbox w-4 h-4" type="checkbox" id="signup" name="signup" aria-label="signup" />
+								<p class="py-1.5 text-xs md:text-sm text-gray-700 dark:text-primary-100">Li, e aceito os <a href="/termos" target="_blank" class="font-semibold text-secondary-600 hover:text-secondary-500 dark:text-primary-500 dark:hover:text-primary-200 hover:underline text-pretty"> Termos de Adesão</a> da GENTE.</p>
 							</label>
 						</div>
 					</div>
 				</div>
-			
-			
-			
-				<!-- <a href="{prefilledLink}" target="_blank"><button>Submit</button></a> -->
-				<div class="py-4">
-					<button disabled={!btnDisabled} type="submit" class="flex w-full justify-center rounded-md bg-secondary-600 px-3 py-3 text-sm/6 font-semibold text-white dark:text-primary-800 shadow-xs hover:bg-secondary-500 dark:bg-primary-500 dark:hover:bg-primary-600 dark:hover:dark:text-primary-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600">Enviar</button>
-				</div>
+
+				{#if btnDisabled == true }
+					<div class="py-4">
+						<button  type="submit" id="submit" class="flex w-full justify-center rounded-md bg-secondary-600 px-3 py-3 text-sm/6 font-semibold text-white dark:text-primary-800 shadow-xs hover:bg-secondary-500 dark:bg-primary-500 dark:hover:bg-primary-600 dark:hover:dark:text-primary-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600" >Enviar</button>
+					</div>
+					{:else}
+					<div class="py-4">
+						<div class="opacity-50 flex w-full justify-center rounded-md bg-secondary-600 px-3 py-3 text-sm/6 font-semibold text-white dark:text-primary-800 shadow-xs dark:bg-primary-500">Enviar</div>
+					</div>
+				{/if}
 		
 			</form>
 			{/if}

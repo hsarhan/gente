@@ -36,7 +36,8 @@ export const actions = {
 
 			return {
 				success: true,
-				status: 'Dados enviados. Agora é só aguardar.'
+				status:
+					'<strong>Dados enviados com sucesso.</strong><br/>Agora é só aguardar nosso contato. Até breve!'
 			};
 		} catch (error) {
 			console.log({ error });
