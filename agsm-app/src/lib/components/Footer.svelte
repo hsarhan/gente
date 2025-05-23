@@ -8,9 +8,9 @@
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
         <div>
             <div class="lg:-ml-3"><LogoHz green lType="w-[12em]" /></div>
-            <p class="mt-4 mx-auto lg:mx-0 max-w-x text-xs text-secondary-800 dark:text-primary-200 text-center lg:text-left">
+            <!-- <p class="mt-4 mx-auto lg:mx-0 max-w-x text-xs text-secondary-800 dark:text-primary-200 text-center lg:text-left">
             Sítio 20 pés • Bairro do Rosário<br/>Delfim Moreira, MG • CEP 37514000
-            </p>
+            </p> -->
 
         </div>
 

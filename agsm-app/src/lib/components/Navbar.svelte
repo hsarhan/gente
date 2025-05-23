@@ -13,11 +13,12 @@
       <nav
         class="w-full max-w-screen-xl min-h-24 p-4 mx-auto md:flex md:justify-between md:items-center"
       >
-        <div class="flex items-center justify-between">
-          <a href="/"><div class="items-center ml-0 mt-1 xl:m-0"><LogoHz lSize="w-[3.2em]" /></div></a>
+        <div class="flex items-center justify-between" aria-label="hamburguer">
+          <a href="/" aria-label="home"><div class="items-center ml-0 mt-1 xl:m-0"><LogoHz lSize="w-[3.2em]" /></div></a>
           <!-- Mobile menu button -->
-          <div on:click={toggleNavbar} class="flex md:hidden">
+          <div on:click={toggleNavbar} class="flex md:hidden" aria-label="toggle">
             <button
+              aria-label="menu"
               type="button"
               class="text-gray-100 hover:text-primary-400 focus:outline-none focus:text-primary-400"
             >
@@ -45,12 +46,13 @@
             ? 'flex'
             : 'hidden'}"
         >
-          <a class="text-gray-100 hover:text-primary-400" href="/">Home</a>
-          <a class="text-gray-100 hover:text-primary-400" href="/">Sobre</a>
-          <a class="text-gray-100 hover:text-primary-400" href="/">Produtos</a>
-          <a class="text-gray-100 hover:text-primary-400" href="/">Contato</a>
+          <a class="text-gray-100 hover:text-primary-400" href="/" aria-label="home">Home</a>
+          <a class="text-gray-100 hover:text-primary-400" href="/" aria-label="sobre">Sobre</a>
+          <a class="text-gray-100 hover:text-primary-400" href="/" aria-label="produtos">Produtos</a>
+          <a class="text-gray-100 hover:text-primary-400" href="/" aria-label="contato">Contato</a>
           <div class="space-y-2">
             <!-- <a
+              aria-label="login"
               href="/login"
               title="Login"
               class="py-3 px-4 text-center border text-gray-800 bg-white hover:text-secondary-600 rounded-md block md:inline lg:border-0"
@@ -58,6 +60,7 @@
               Login
             </a> -->
             <a
+              aria-label="signup"
               href="/signup"
               title="Faça parte"
               class="py-3 px-4 text-center text-primary-900 bg-primary-500 hover:bg-primary-300 rounded-md shadow block md:inline"
