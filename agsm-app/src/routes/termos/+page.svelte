@@ -2,16 +2,15 @@
 	import Footer from "$lib/components/Footer.svelte";
 	import Navbar from "$lib/components/Navbar.svelte";
 
-
-
 </script>
 
 <Navbar />
 <section class="max-w-6xl mx-auto">
 
-	<main class="p-4 space-y-6 dark:bg-primary-800">
+	<main class="p-4 lg:py-16 2xl:py-32 space-y-6 dark:bg-primary-800">
         <!-- Content wrapper -->
 		<div class="my-10 mx-auto w-full sm:max-w-3xl bg-surface-50-950 p-6 space-y-2 rounded-lg">
+
             <h2 class="h2">Termos de Adesão</h2>
 
             <h6 class="h6 text-secondary-300 dark:text-primary-200 mt-6 text-pretty">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>

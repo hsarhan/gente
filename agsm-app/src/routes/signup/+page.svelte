@@ -11,10 +11,20 @@
 	let btnDisabled = false;
 	let pacList = pacientes;
 	let diagList = diagnosticos;
+	
 
 </script>
 
 <Navbar />
+
+<!-- Options Snippet -->
+{#snippet option(list)}
+	{#each Object.entries(list) as [key, value] (key)}
+	<option value={value}>
+		{value}
+	</option>
+	{/each}
+{/snippet}
 
 <main class="p-4 space-y-6 dark:bg-primary-800">
 	<!-- SignUp Form -->
@@ -31,8 +41,8 @@
 			{#if form?.success }
 			<!-- Success -->
 			<div class="space-y-2 pb-2">
-				<h4 class="h4">A GENTE se fala em breve...</h4>
-				<p class="py-4 text-sm text-secondary-300 dark:text-primary-300 mb-4">{@html form?.status || ""}</p>
+				<h4 class="h4 text-secondary-600 dark:text-primary-400">A GENTE se fala em breve...</h4>
+				<p class="py-4 text-sm text-gray-500 dark:text-gray-200 mb-4">{@html form?.status || ""}</p>
 				<a href="/" class="flex w-full justify-center rounded-md bg-secondary-600 px-3 py-3 text-sm/6 font-semibold text-white dark:text-primary-800 shadow-xs hover:bg-secondary-500 dark:bg-primary-500 dark:hover:bg-primary-600 dark:hover:dark:text-primary-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600">Voltar para home</a>
 			</div>
 			{:else}
@@ -82,11 +92,7 @@
 						<select id="pacient" name="pacient" aria-label="pacient" class="select block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.pacient || ""} class:error={form?.errors.pacient} >				
 						<optgroup>
 							<option disabled selected>Para quem é o tratamento...</option>
-							{#each Object.entries(pacList) as [key, value] (key)}
-								<option value={value}>
-									{value}
-								</option>
-							{/each}
+							{@render option(pacList)}
 						</optgroup>
 						</select>
 						{#if form?.errors.pacient }
@@ -99,14 +105,10 @@
 				<div>
 					<label for="diag" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Diagnóstico</label>
 					<div class="mt-2">
-						<select id="diag" name="diag" aria-label="diag"  class="select block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.diag || ""} class:error={form?.errors.diag} >
+						<select id="diag" name="diag" aria-label="diag"  class="select block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.diag || ""} class:error={form?.errors.diag}>
 						<optgroup>
 							<option disabled selected>Selecione um diagnóstico...</option>
-							{#each Object.entries(diagList) as [key, value] (key)}
-								<option value={value}>
-									{value}
-								</option>
-							{/each}
+							{@render option(diagList)}
 						</optgroup>
 						</select>
 						{#if form?.errors.diag }
@@ -128,7 +130,7 @@
 					<div class="mt-2">
 						<div class="w-full mt-2 grid gap-4">
 							<label class="flex items-center space-x-2">
-								<input bind:checked={btnDisabled} class="checkbox w-4 h-4" type="checkbox" id="signup" name="signup" aria-label="signup" />
+								<input bind:checked={btnDisabled} class="checkbox w-4 h-4" type="checkbox" id="signup" name="signup" aria-label="signup"/>
 								<p class="py-1.5 text-xs md:text-sm text-gray-700 dark:text-primary-100">Li, e aceito os <a href="/termos" target="_blank" class="font-semibold text-secondary-600 hover:text-secondary-500 dark:text-primary-500 dark:hover:text-primary-200 hover:underline text-pretty"> Termos de Adesão</a> da GENTE.</p>
 							</label>
 						</div>
