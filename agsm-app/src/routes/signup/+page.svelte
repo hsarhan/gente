@@ -7,10 +7,16 @@
 
 	export let form;
     // $: console.log(form);
-
+	
 	let btnDisabled = false;
 	let pacList = pacientes;
 	let diagList = diagnosticos;
+
+	// Svelte 5 Runes
+	// let form = $form();
+	// let btnDisabled = $state(false);
+	// let pacList = $derived(pacientes)
+	// let diagList = $derived(diagnosticos)
 	
 
 </script>

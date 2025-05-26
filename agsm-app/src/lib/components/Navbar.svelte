@@ -13,12 +13,12 @@
       <nav
         class="w-full max-w-screen-xl min-h-24 p-4 mx-auto md:flex md:justify-between md:items-center"
       >
-        <div class="flex items-center justify-between" aria-label="hamburguer">
+        <div class="flex items-center justify-between" aria-label="headNav">
           <a href="/" aria-label="home"><div class="items-center ml-0 mt-1 xl:m-0"><LogoHz lSize="w-[3.2em]" /></div></a>
           <!-- Mobile menu button -->
           <div on:click={toggleNavbar} class="flex md:hidden" aria-label="toggle">
             <button
-              aria-label="menu"
+              aria-label="menu-toggle"
               type="button"
               class="text-gray-100 hover:text-primary-400 focus:outline-none focus:text-primary-400"
             >
@@ -41,7 +41,7 @@
         </div>
   
         <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-        <div
+        <div aria-label="mobile-toggle"
           class="uppercase text-center md:text-left flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-6 lg:space-x-10 md:mt-0 {showMenu
             ? 'flex'
             : 'hidden'}"
