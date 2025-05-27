@@ -1,5 +1,5 @@
 <script lang="ts">
-	import TempHome from '$lib/components/TempHome.svelte';
+	import Home from '$lib/components/Home.svelte';
   </script>
 
 <svelte:head>
@@ -7,5 +7,5 @@
 </svelte:head>
 
 <div class="max-w-6xl h-screen grid grid-rows-[auto_1fr_auto] mx-auto bg-primary-50 dark:bg-primary-800">
-    <TempHome />
+    <Home />
 </div>

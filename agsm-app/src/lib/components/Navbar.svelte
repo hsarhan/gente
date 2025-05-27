@@ -1,7 +1,7 @@
 <script>
-	  import LightSwitch from './LightSwitch.svelte';
+	import LightSwitch from './LightSwitch.svelte';
 	  import LogoHz from './LogoHz.svelte';
-    let showMenu = false;
+    let showMenu = $state(false);
   
     function toggleNavbar() {
       showMenu = !showMenu;
@@ -13,11 +13,12 @@
       <nav
         class="w-full max-w-screen-xl min-h-24 p-4 mx-auto md:flex md:justify-between md:items-center"
       >
-        <div class="flex items-center justify-between" aria-label="headNav">
+        <div class="flex items-center justify-between">
           <a href="/" aria-label="home"><div class="items-center ml-0 mt-1 xl:m-0"><LogoHz lSize="w-[3.2em]" /></div></a>
           <!-- Mobile menu button -->
-          <div on:click={toggleNavbar} class="flex md:hidden" aria-label="toggle">
+          <div class="flex md:hidden" aria-label="mobile-menu">
             <button
+              onclick={toggleNavbar} 
               aria-label="menu-toggle"
               type="button"
               class="text-gray-100 hover:text-primary-400 focus:outline-none focus:text-primary-400"
@@ -41,15 +42,15 @@
         </div>
   
         <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-        <div aria-label="mobile-toggle"
+        <div
           class="uppercase text-center md:text-left flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-6 lg:space-x-10 md:mt-0 {showMenu
             ? 'flex'
             : 'hidden'}"
         >
           <a class="text-gray-100 hover:text-primary-400" href="/" aria-label="home">Home</a>
-          <a class="text-gray-100 hover:text-primary-400" href="/" aria-label="sobre">Sobre</a>
-          <a class="text-gray-100 hover:text-primary-400" href="/" aria-label="produtos">Produtos</a>
-          <a class="text-gray-100 hover:text-primary-400" href="/" aria-label="contato">Contato</a>
+          <a class="text-gray-100 hover:text-primary-400" href="/sobre" aria-label="sobre">Sobre</a>
+          <a class="text-gray-100 hover:text-primary-400" href="/produtos" aria-label="produtos">Produtos</a>
+          <a class="text-gray-100 hover:text-primary-400" href="/contato" aria-label="contato">Contato</a>
           <div class="space-y-2">
             <!-- <a
               aria-label="login"

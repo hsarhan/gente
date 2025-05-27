@@ -1,6 +1,4 @@
 <script>
-	import Logo from "./Logo.svelte";
-
     const imgSrc =
     'https://images.unsplash.com/photo-1463171515643-952cee54d42a?q=80&w=450&h=190&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 </script>
@@ -80,7 +78,7 @@
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h3, h6 {
         font-family: 'Brevia-Bold'
     }
 </style>

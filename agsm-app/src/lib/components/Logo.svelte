@@ -5,6 +5,7 @@
 
     export let showText = false;
     export let green = false;
+
 </script>
 
 <div class="text-center">
