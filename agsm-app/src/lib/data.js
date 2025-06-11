@@ -27,5 +27,6 @@ export const diagnosticos = {
 	20: 'Náuseas induzidas por quimioterapia',
 	21: 'Síndrome do intestino irritável (SII)',
 	22: 'Síndrome de Tourette',
-	23: 'Transtorno de estresse pós-traumático (TEPT)'
+	23: 'Transtorno de estresse pós-traumático (TEPT)',
+	24: 'Outro'
 };

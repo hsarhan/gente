@@ -12,14 +12,16 @@
 	let pacList = pacientes;
 	let diagList = diagnosticos;
 
-	// Svelte 5 Runes
-	// let form = $form();
-	// let btnDisabled = $state(false);
-	// let pacList = $derived(pacientes)
-	// let diagList = $derived(diagnosticos)
-	
+	// Local reactive variable for the <select>
+	let selectedDiag = form?.diag || "";
+
+	$: showOtherField = selectedDiag === "Outro";
 
 </script>
+
+<svelte:head>
+    <title>Faça parte da Associação GENTE da Serra da Mantiqueira</title>
+</svelte:head>
 
 <Navbar />
 
@@ -107,21 +109,43 @@
 					</div>
 				</div>
 				
-				<!-- Diagnostico -->
+				<!-- Diagnóstico -->
 				<div>
 					<label for="diag" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Diagnóstico</label>
 					<div class="mt-2">
-						<select id="diag" name="diag" aria-label="diag"  class="select block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.diag || ""} class:error={form?.errors.diag}>
-						<optgroup>
-							<option disabled selected>Selecione um diagnóstico...</option>
-							{@render option(diagList)}
-						</optgroup>
+						<select
+							id="diag"
+							name="diag"
+							aria-label="diag"
+							bind:value={selectedDiag}
+							class="select block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6"
+							class:error={form?.errors.diag}
+						>
+							<optgroup>
+								<option disabled selected>Selecione um diagnóstico...</option>
+								{@render option(diagList)}
+							</optgroup>
 						</select>
-						{#if form?.errors.diag }
-							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.diag}</p>
+						{#if form?.errors.diag}
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form.errors.diag}</p>
 						{/if}
 					</div>
+
+					{#if showOtherField}
+						<div class="mt-3">
+							<input
+								type="text"
+								name="other"
+								id="other"
+								aria-label="other"
+								class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6"
+								placeholder="Qual?"
+								value={form?.other || ""}
+							/>
+						</div>
+					{/if}
 				</div>
+
 			
 				<!-- Mensagem -->
 				<div>
