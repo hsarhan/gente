@@ -48,7 +48,7 @@
             : 'hidden'}"
         >
           <a class="text-gray-100 hover:text-primary-400" href="/" aria-label="home">Home</a>
-          <a class="text-gray-100 hover:text-primary-400" href="/contato" aria-label="contato">Contato</a>
+          <!-- <a class="text-gray-100 hover:text-primary-400" href="/contato" aria-label="contato">Contato</a> -->
           <div class="space-y-2">
             <!-- <a
               aria-label="login"
