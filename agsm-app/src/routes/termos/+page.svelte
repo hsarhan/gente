@@ -13,19 +13,21 @@
 
             <h2 class="h2">Termos de Adesão</h2>
 
-            <h6 class="h6 text-secondary-300 dark:text-primary-200 mt-6 text-pretty">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+            <h6 class="h6 text-secondary-300 dark:text-primary-200 mt-6 text-pretty">Requerimento de Inscrição como Associado(a) – Categoria Paciente</h6>
             <p class="text-gray-500 dark:text-gray-300 text-pretty">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur provident eveniet eligendi cumque consequatur tempore sint nisi sapiente. Iste beatae laboriosam iure molestias cum expedita architecto itaque quae rem.
+                Por meio deste, venho requerer minha inscrição como associado(a), na categoria Paciente, da Associação Gente da Serra da Mantiqueira, inscrita no CNPJ sob o nº 51.508.002/0001-27, com sede localizada na Estrada Sítio 20 Pés, s/n, Bairro Morro da Cata, CEP 37516-000, no município de Marmelópolis/MG.
             </p>
 
-            <h6 class="h6 text-secondary-300 dark:text-primary-200 mt-6 text-pretty">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
             <p class="text-gray-500 dark:text-gray-300 text-pretty">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur provident eveniet eligendi cumque consequatur tempore sint nisi sapiente. Iste beatae laboriosam iure molestias cum expedita architecto itaque quae rem.
+                Ao enviar os dados por este formulário, declaro estar plenamente ciente e de acordo com o conteúdo integral do <a href="https://drive.google.com/file/d/1ZswHGVxpXGoA_NUP8cLUhR_ruEXk30uX/view?usp=drive_link" target="_blank" class="text-secondary-500 dark:text-primary-600 font-medium hover:underline"> Estatuto Social da Associação</a>, bem como dos direitos e deveres atribuídos aos seus membros.
             </p>
 
-            <h6 class="h6 text-secondary-300 dark:text-primary-200 mt-6 text-pretty">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
             <p class="text-gray-500 dark:text-gray-300 text-pretty">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur provident eveniet eligendi cumque consequatur tempore sint nisi sapiente. Iste beatae laboriosam iure molestias cum expedita architecto itaque quae rem.
+                Comprometo-me, ainda, a manter em dia o pagamento de todas as contribuições financeiras devidas à Associação, sob pena de desligamento, nos termos previstos no estatuto.
+            </p>
+
+            <p class="text-gray-500 dark:text-gray-300 text-pretty">
+                * Valor da anuidade: R$ 500,00
             </p>
            
         </div>
