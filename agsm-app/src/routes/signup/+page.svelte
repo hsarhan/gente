@@ -3,7 +3,7 @@
 	import Footer from "$lib/components/Footer.svelte";
 	import Logo from "$lib/components/Logo.svelte";
 	import Navbar from "$lib/components/Navbar.svelte";
-	import {pacientes, diagnosticos} from "$lib/data.js"
+	import {pacientes, diagnosticos, estadosBR, paises, estadoCivil} from "$lib/data.js"
 
 	export let form;
     // $: console.log(form);
@@ -11,6 +11,9 @@
 	let btnDisabled = false;
 	let pacList = pacientes;
 	let diagList = diagnosticos;
+	let estados = estadosBR;
+	let nacionalidades = paises;
+	let estadosCivis = estadoCivil;
 
 	// Local reactive variable for the <select>
 	let selectedDiag = form?.diag || "";
@@ -89,6 +92,153 @@
 						<input type="tel" name="phone" id="phone" aria-label="phone" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" placeholder="ex: +55 11 987654321" value={form?.phone || ""} class:error={form?.errors.phone} />
 						{#if form?.errors.phone }
 							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.phone}</p>
+						{/if}
+					</div>
+				</div>
+
+				<!-- Endereço -->
+				<div>
+					<label for="address" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Seu endereço</label>
+					<div class="mt-2">
+						<input type="text" name="address" id="address" aria-label="address" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.address || ""} class:error={form?.errors.address} />
+						{#if form?.errors.address }
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.address}</p>
+						{/if}
+					</div>
+				</div>
+
+				<!-- Cidade -->
+				<div>
+					<label for="city" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Sua cidade</label>
+					<div class="mt-2">
+						<input type="text" name="city" id="city" aria-label="city" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.city || ""} class:error={form?.errors.city} />
+						{#if form?.errors.city }
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.city}</p>
+						{/if}
+					</div>
+				</div>
+
+				<!-- Estado -->
+				<div>
+					<label for="state" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Seu estado</label>
+					<div class="mt-2">
+						<select id="state" name="state" aria-label="state" class="select block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.state || ""} class:error={form?.errors.state} >				
+						<optgroup>
+							<option disabled selected>Selecione seu estado...</option>
+							{@render option(estados)}
+						</optgroup>
+						</select>
+						{#if form?.errors.state }
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.state}</p>
+						{/if}
+					</div>
+				</div>
+
+				<!-- CEP -->
+				<div>
+					<label for="zipCode" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Seu CEP</label>
+					<div class="mt-2">
+						<input type="tel" name="zipCode" id="zipCode" aria-label="zipCode" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.zipCode || ""} class:error={form?.errors.zipCode} />
+						{#if form?.errors.zipCode }
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.zipCode}</p>
+						{/if}
+					</div>
+				</div>
+
+				<!-- CPF -->
+				<div>
+					<label for="cpf" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Seu CPF</label>
+					<div class="mt-2">
+						<input type="tel" name="cpf" id="cpf" aria-label="cpf" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.cpf || ""} class:error={form?.errors.cpf} />
+						{#if form?.errors.cpf }
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.cpf}</p>
+						{/if}
+					</div>
+				</div>
+
+				<!-- RG -->
+				<div>
+					<label for="rg" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Seu RG</label>
+					<div class="mt-2">
+						<input type="tel" name="rg" id="rg" aria-label="rg" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.rg || ""} class:error={form?.errors.rg} />
+						{#if form?.errors.rg }
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.rg}</p>
+						{/if}
+					</div>
+				</div>
+
+				<!-- RG EXP -->
+				<div>
+					<label for="rgExp" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Órgão Expedidor</label>
+					<div class="mt-2">
+						<input type="tel" name="rgExp" id="rgExp" aria-label="rgExp" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.rgExp || ""} class:error={form?.errors.rgExp} />
+						{#if form?.errors.rgExp }
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.rgExp}</p>
+						{/if}
+					</div>
+				</div>
+
+				<!-- Nacionalidade -->
+				<div>
+					<label for="country" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Sua Nacionalidade</label>
+					<div class="mt-2">
+						<select id="country" name="country" aria-label="country" class="select block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.country || ""} class:error={form?.errors.country} >				
+						<optgroup>
+							<option disabled selected>Selecione um país...</option>
+							{@render option(nacionalidades)}
+						</optgroup>
+						</select>
+						{#if form?.errors.country }
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.country}</p>
+						{/if}
+					</div>
+				</div>
+
+				<!-- Data de Nascimento -->
+				<div>
+					<label for="birth" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Sua data de nascimento</label>
+					<div class="mt-2">
+						<input type="date" name="birth" id="birth" aria-label="birth" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.birth || ""} class:error={form?.errors.birth} />
+						{#if form?.errors.birth }
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.birth}</p>
+						{/if}
+					</div>
+				</div>
+
+				<!-- Cidade de Nascimento -->
+				<div>
+					<label for="birthCity" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Sua cidade de nascimento</label>
+					<div class="mt-2">
+						<input type="text" name="birthCity" id="birthCity" aria-label="birthCity" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.birthCity || ""} class:error={form?.errors.birthCity} />
+						{#if form?.errors.birthCity }
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.birthCity}</p>
+						{/if}
+					</div>
+				</div>
+
+				<!-- Estado Civil -->
+				<div>
+					<label for="relationship" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Seu estado civil</label>
+					<div class="mt-2">
+						<select id="relationship" name="relationship" aria-label="relationship" class="select block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.relationship || ""} class:error={form?.errors.relationship} >				
+						<optgroup>
+							<option disabled selected>Selecione...</option>
+							{@render option(estadosCivis)}
+						</optgroup>
+						</select>
+						{#if form?.errors.relationship }
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.relationship}</p>
+						{/if}
+					</div>
+				</div>
+
+				<!-- Ocupação -->
+				<div>
+					<label for="occupation" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Sua ocupação</label>
+					<div class="mt-2">
+						<input type="text" name="occupation" id="occupation" aria-label="occupation" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.occupation || ""} class:error={form?.errors.occupation} />
+						{#if form?.errors.occupation }
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.occupation}</p>
 						{/if}
 					</div>
 				</div>
@@ -179,6 +329,7 @@
 		
 			</form>
 			{/if}
+			
 		
 		</div>
 	</div>
