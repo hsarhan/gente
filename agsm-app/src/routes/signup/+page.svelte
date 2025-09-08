@@ -29,7 +29,7 @@
 <Navbar />
 
 <!-- Options Snippet -->
-{#snippet option(list)}
+{#snippet option(/** @type {{ [s: string]: any; } | ArrayLike<any>} */ list)}
 	{#each Object.entries(list) as [key, value] (key)}
 	<option value={value}>
 		{value}
@@ -118,6 +118,17 @@
 					</div>
 				</div>
 
+				<!-- Bairro -->
+				<div>
+					<label for="neighborhood" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Seu bairro</label>
+					<div class="mt-2">
+						<input type="text" name="neighborhood" id="neighborhood" aria-label="neighborhood" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.neighborhood || ""} class:error={form?.errors.neighborhood} />
+						{#if form?.errors.neighborhood }
+							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.neighborhood}</p>
+						{/if}
+					</div>
+				</div>
+
 				<!-- Estado -->
 				<div>
 					<label for="state" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Seu estado</label>
@@ -169,9 +180,9 @@
 
 				<!-- RG EXP -->
 				<div>
-					<label for="rgExp" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Órgão Expedidor</label>
+					<label for="rgExp" class="block text-sm/6 font-medium text-gray-900 dark:text-primary-200">Órgão Expedidor (RG)</label>
 					<div class="mt-2">
-						<input type="tel" name="rgExp" id="rgExp" aria-label="rgExp" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" value={form?.rgExp || ""} class:error={form?.errors.rgExp} />
+						<input type="tel" name="rgExp" id="rgExp" aria-label="rgExp" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary-600 sm:text-sm/6" placeholder="ex: SSP/SP" value={form?.rgExp || ""} class:error={form?.errors.rgExp} />
 						{#if form?.errors.rgExp }
 							<p class="mt-1 text-error-600 text-xs font-bold">* {form?.errors.rgExp}</p>
 						{/if}
