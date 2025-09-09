@@ -2,12 +2,16 @@
 	import { fade, fly } from "svelte/transition";
 	import Logo from "./Logo.svelte";
 	import { cubicOut } from "svelte/easing";
-	import { onMount } from "svelte";
+	import { onDestroy, onMount } from "svelte";
 
     let mounted = $state(false);
 
     onMount(() => {
         mounted = true;
+    });
+
+    onDestroy(() => {
+        mounted = false;
     });
 </script>
 
@@ -15,7 +19,7 @@
 <div></div>
 <div class="grid content-center justify-items-center place-self-center">
     <div class="dark:hidden" in:fade={{duration: 1000}}><Logo showText green /></div>
-    <div class="hidden dark:block"><Logo showText /></div>
+    <div class="hidden dark:block" in:fade={{duration: 1000}}><Logo showText /></div>
     <div class="my-8 hover:scale-95 transition-all duration-300 ease-out" in:fly={{ y: 100, duration: 1500, delay: 1500, easing: cubicOut}}>
         <a
             aria-label="signup"
