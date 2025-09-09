@@ -2,8 +2,16 @@
 	import { fade, fly } from "svelte/transition";
 	import Logo from "./Logo.svelte";
 	import { cubicOut } from "svelte/easing";
+	import { onMount } from "svelte";
+
+    let mounted = $state(false);
+
+    onMount(() => {
+        mounted = true;
+    });
 </script>
 
+{#if mounted === true}
 <div></div>
 <div class="grid content-center justify-items-center place-self-center">
     <div class="dark:hidden" in:fade={{duration: 1000}}><Logo showText green /></div>
@@ -20,3 +28,4 @@
     </div>
 </div>
 <div></div>
+{/if}
